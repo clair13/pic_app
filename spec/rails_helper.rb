@@ -37,6 +37,11 @@ ENV['RAILS_ENV'] ||= 'test'
         with.library :rails
       end
     end
+
+    config.include Warden::Test::Helpers
+    config.before :suite do
+      Warden.test_mode!
+    end
     
     config.infer_spec_type_from_file_location!
 
