@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     get :dashboard, on: :member
   end
 
-  resources :albums
+  resources :albums do
+    resources :images
+  end
 
   root 'home#site_index'
 

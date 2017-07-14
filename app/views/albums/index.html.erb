@@ -1,0 +1,6 @@
+<div>
+  <% @albums_created.each do |album| %>
+    <%= album.name %>
+    <%= link_to "View Album", album_path(album) %>
+  <% end %>
+</div>

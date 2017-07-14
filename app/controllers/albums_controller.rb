@@ -1,5 +1,9 @@
 class AlbumsController < ApplicationController
 
+  def index
+    @albums_created = current_member.albums
+  end
+  
   def new
     @album = current_member.albums.new
   end
